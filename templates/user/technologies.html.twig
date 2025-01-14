@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Technologies{% endblock %}
+
+{% block body %}
+    <h1>Technologies</h1>
+
+    <a href="{{ path('user_home') }}" class="btn btn-primary">Revenir à l'accueil</a>
+    <a href="{{ path('technology_create') }}" class="btn btn-success">Ajouter une technologie</a>
+
+    <ul>
+        {% for tech in technologies %}
+            <li>
+                <h2>{{ tech.name }}</h2>
+                <p>Version : {{ tech.version }}</p>
+                {% if tech.logo %}
+                    <img src="{{ asset(tech.logo) }}" alt="{{ tech.name }}" class="img-thumbnail">
+                {% endif %}
+                <p></p>
+                <a href="{{ path('technology_edit', { id: tech.id }) }}" class="btn btn-warning">Modifier</a>
+                <form action="{{ path('technology_delete', { id: tech.id }) }}" method="POST" onsubmit="return confirm('Êtes-vous sûr ?');">
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
