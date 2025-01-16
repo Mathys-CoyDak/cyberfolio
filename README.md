@@ -36,10 +36,13 @@ composer install
    ```bash
    php bin/console doctrine:migrations:migrate
    ```
-3. Chargez les données initiales (fixtures) :
+3. Chargez les données initiales pour avoir un utilisateur admin(fixtures) :
    ```bash
    php bin/console doctrine:fixtures:load
    ```
+
+Email : admin@exemple.com
+Password : admin123
 
 ### 5. Lancer le serveur
 Démarrez le serveur pour tester l'application :
