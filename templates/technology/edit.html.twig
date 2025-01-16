@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier la technologie{% endblock %}
+
+{% block body %}
+    <h1>Modifier la technologie</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.name) }}
+    {{ form_row(form.version) }}
+    {{ form_row(form.logo) }}
+    {% if technology.logo %}
+        <img src="{{ asset(technology.logo) }}" alt="{{ technology.name }}" class="img-thumbnail">
+    {% endif %}
+
+    <button class="btn btn-primary">Mettre à jour</button>
+    {{ form_end(form) }}
+{% endblock %}
