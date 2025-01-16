@@ -1,10 +1,15 @@
+
+
 ## Étapes d'installation
 
 ### 1. Cloner le dépôt
+
+J'ai utilisé XAMPP avec symfony.
+
 Clonez le dépôt du projet depuis le gestionnaire de version :
 ```bash
-git clone <URL_DU_DEPOT>
-cd <NOM_DU_PROJET>
+git clone https://github.com/Mathys-CoyDak/cyberfolio.git
+cd cyberfolio
 ```
 
 ### 2. Installer les dépendances
@@ -31,7 +36,7 @@ composer install
    ```bash
    php bin/console doctrine:migrations:migrate
    ```
-3. Chargez les données initiales (fixtures)88 :
+3. Chargez les données initiales (fixtures) :
    ```bash
    php bin/console doctrine:fixtures:load
    ```
