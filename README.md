@@ -29,3 +29,7 @@ La gestion de l'authentification m'a pris un peu de temps à comprendre: J'ai su
 
 ## Remarques complémentaires
 
+Si vous créer une nouvelle table : j'ai mis en place des fixtures pour avoir l'utilisateur admin:
+   ```bash
+   php bin/console doctrine:fixtures:load
+   ```
