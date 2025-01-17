@@ -18,6 +18,11 @@
                         <li class="list-group-item">
                                 <a href="{{ path('admin_technologies') }}">Gérer les Technologies</a>
                         </li>
+
                 </ul>
         </div>
+
+        <form action="{{ path('app_logout') }}" method="POST">
+                <button type="submit" class="btn btn-danger">Déconnexion</button>
+        </form>
 {% endblock %}
