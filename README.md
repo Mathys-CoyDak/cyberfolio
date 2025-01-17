@@ -24,8 +24,3 @@ La gestion de l'authentification m'a pris un peu de temps à comprendre: J'ai su
 
 ## Remarques complémentaires
 
-Chargez les données initiales pour avoir un utilisateur admin(fixtures) :
-   ```bash
-   php bin/console doctrine:fixtures:load
-   ```
-
