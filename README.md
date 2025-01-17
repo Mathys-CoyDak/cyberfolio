@@ -1,52 +1,31 @@
+# Projet « Cyberfolio »
 
+## Compte administrateur
 
-## Étapes d'installation
+- URL du *back-office* : `127.0.0.1:8000/admin`
+- Identifiant : `admin@exemple.com`
+- Mot de passe : `admin123`
 
-### 1. Cloner le dépôt
+## État d'avancement
 
-J'ai utilisé XAMPP avec symfony.
+Les utilisateurs peuvent créer/modifier/supprimer un projet et des technologies.
+Un projet peut associées des technologies et inversement.
+Les admin peuvent créer/modifier/supprimer tout les utilisateurs/projet/technologies de la base.
 
-Clonez le dépôt du projet depuis le gestionnaire de version :
-```bash
-git clone https://github.com/Mathys-CoyDak/cyberfolio.git
-cd cyberfolio
-```
+## Difficultés rencontrées et solutions
 
-### 2. Installer les dépendances
-Exécutez la commande suivante pour installer les dépendances du projet :
-```bash
-composer install
-```
+La gestion de l'authentification m'a pris un peu de temps à comprendre: J'ai suivi et repris plusieurs fois le tp7
 
-### 3. Configurer le fichier `.env`
+## Bilan des acquis
 
+- Utilisation de PhpStorm
+- Faire un serveur Symfony
+- Les automatisations avec les commandes symfony/php
 
-- Mettez à jour les variables d'environnement dans le fichier `.env`, par exemple :
-  ```env
-  DATABASE_URL="mysql://root@127.0.0.1:3306/cyberfolio?serverVersion=10.4.32-MariaDB&charset=utf8mb4"
-  ```
+## Remarques complémentaires
 
-### 4. Configurer la base de données
-
-1. Créez la base de données :
-   ```bash
-   php bin/console doctrine:database:create
-   ```
-2. Exécutez les migrations :
-   ```bash
-   php bin/console doctrine:migrations:migrate
-   ```
-3. Chargez les données initiales (fixtures) :
+Chargez les données initiales pour avoir un utilisateur admin(fixtures) :
    ```bash
    php bin/console doctrine:fixtures:load
    ```
 
-### 5. Lancer le serveur
-Démarrez le serveur pour tester l'application :
-
-- Avec Symfony CLI :
-  ```bash
-  symfony server:start
-  ```
-
-L'application sera accessible à l'adresse : [http://127.0.0.1:8000](http://127.0.0.1:8000).
