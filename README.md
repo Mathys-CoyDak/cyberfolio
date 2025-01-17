@@ -8,9 +8,14 @@
 
 ## État d'avancement
 
-Les utilisateurs peuvent créer/modifier/supprimer un projet et des technologies.
-Un projet peut associées des technologies et inversement.
-Les admin peuvent créer/modifier/supprimer tout les utilisateurs/projet/technologies de la base.
+- [x] Création des entités
+- [x] Mise en place du CRUD
+- [x] Mise en place de l'authentification
+- [x] Dashboard admin
+- [x] Dashboard user
+- [x] Création d'un project lié à un USER
+- [x] Création d'un project lié à une technologie
+- [x] Front End
 
 ## Difficultés rencontrées et solutions
 
